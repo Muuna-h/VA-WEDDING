@@ -137,7 +137,7 @@ export function EnvelopeAnimation() {
         >
           {/* Main Envelope */}
           <motion.div 
-            className="envelope-3d w-96 h-64 md:w-[480px] md:h-80 relative rounded-lg"
+            className="envelope-3d w-80 h-52 sm:w-96 sm:h-64 md:w-[480px] md:h-80 relative rounded-lg"
             animate={{
               boxShadow: animationStep >= 1 ? [
                 "0 25px 50px rgba(0,0,0,0.3), 0 0 40px rgba(255, 215, 0, 0.6)",
@@ -159,7 +159,7 @@ export function EnvelopeAnimation() {
             </div>
             {/* Envelope Flap */}
             <motion.div 
-              className="envelope-flap absolute top-0 left-0 w-full h-40 md:h-48"
+              className="envelope-flap absolute top-0 left-0 w-full h-32 sm:h-40 md:h-48"
               animate={animationStep >= 3 ? { rotateX: -90 } : { rotateX: 0 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
               style={{ transformOrigin: "bottom" }}
@@ -167,8 +167,13 @@ export function EnvelopeAnimation() {
             
             {/* Heart Seal */}
             <motion.div 
-              className="heart-seal absolute top-20 md:top-24 left-1/2 w-20 h-20 rounded-full flex items-center justify-center z-10"
-              style={{ transform: "translateX(-50%)" }}
+              className="absolute top-16 sm:top-20 md:top-24 left-1/2 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center z-10"
+              style={{ 
+                transform: "translateX(-50%)",
+                background: "radial-gradient(circle, hsl(330, 68%, 75%) 0%, hsl(330, 68%, 65%) 50%, hsl(330, 68%, 55%) 100%)",
+                boxShadow: "0 0 20px rgba(248, 187, 217, 0.6)",
+                clipPath: "polygon(50% 5%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)"
+              }}
               animate={animationStep >= 2 ? { 
                 scale: [1, 1.2, 0], 
                 rotate: [0, 180, 360],
@@ -176,7 +181,7 @@ export function EnvelopeAnimation() {
               } : { scale: 1, rotate: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              <div className="text-white font-bold text-xl">VA</div>
+              <div className="text-white font-bold text-xs sm:text-sm">VA</div>
             </motion.div>
             
             {/* Envelope Text */}
@@ -189,12 +194,12 @@ export function EnvelopeAnimation() {
           
           {/* Invitation Card */}
           <motion.div 
-            className="invitation-card absolute top-0 left-1/2 w-80 h-[480px] md:w-96 md:h-[550px] rounded-xl p-8 z-20"
+            className="invitation-card absolute top-0 left-1/2 w-64 h-[380px] sm:w-72 sm:h-[420px] md:w-80 md:h-[480px] rounded-xl p-4 sm:p-6 z-20"
             style={{ transform: "translateX(-50%)" }}
             initial={{ opacity: 0, y: 0, scale: 0.8 }}
             animate={animationStep >= 4 ? {
               opacity: 1,
-              y: -120,
+              y: -80,
               scale: 1
             } : {
               opacity: 0,
@@ -204,14 +209,14 @@ export function EnvelopeAnimation() {
             transition={{ duration: 2, ease: "easeOut" }}
           >
             <div className="text-center h-full flex flex-col justify-center relative">
-              {/* Decorative Hearts */}
-              <div className="absolute top-4 left-4 text-wedding-pink text-2xl">♥</div>
-              <div className="absolute top-4 right-4 text-wedding-gold text-2xl">♥</div>
-              <div className="absolute bottom-4 left-4 text-wedding-gold text-2xl">♥</div>
-              <div className="absolute bottom-4 right-4 text-wedding-pink text-2xl">♥</div>
+              {/* Watercolor Roses in Corners */}
+              <div className="absolute top-1 left-1 sm:top-2 sm:left-2 text-wedding-pink text-sm sm:text-xl opacity-60">🌹</div>
+              <div className="absolute top-1 right-1 sm:top-2 sm:right-2 text-wedding-pink text-sm sm:text-xl opacity-60">🌹</div>
+              <div className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 text-wedding-gold text-xs sm:text-lg opacity-60">🌿</div>
+              <div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 text-wedding-gold text-xs sm:text-lg opacity-60">🌿</div>
               
               <motion.h1 
-                className="font-dancing text-5xl md:text-6xl text-wedding-gold mb-6 drop-shadow-sm"
+                className="font-dancing text-2xl sm:text-3xl md:text-4xl text-wedding-gold mb-3 sm:mb-4 drop-shadow-sm"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={animationStep >= 4 ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                 transition={{ delay: 1, duration: 1.2 }}
@@ -220,19 +225,37 @@ export function EnvelopeAnimation() {
               </motion.h1>
               
               <motion.div 
-                className="space-y-6 text-lg md:text-xl"
+                className="space-y-2 sm:space-y-3 text-xs sm:text-sm md:text-base"
                 initial={{ opacity: 0, y: 20 }}
                 animate={animationStep >= 4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 1.8, duration: 1 }}
               >
-                <p className="font-playfair text-wedding-charcoal font-medium">to celebrate the union of</p>
-                <h2 className="font-dancing text-4xl md:text-5xl text-wedding-pink drop-shadow-sm leading-tight">
+                <p className="font-playfair text-wedding-charcoal text-xs sm:text-sm font-medium">to celebrate the union of</p>
+                <h2 className="font-dancing text-xl sm:text-2xl md:text-3xl text-wedding-pink drop-shadow-sm leading-tight">
                   Vanessa & Augustine
                 </h2>
-                <div className="w-16 h-0.5 bg-wedding-gold mx-auto"></div>
-                <p className="font-playfair text-2xl text-wedding-charcoal font-semibold">July 29th, 2025</p>
-                <p className="font-playfair text-lg text-wedding-charcoal">4:00 PM</p>
-                <p className="font-playfair text-lg text-wedding-charcoal font-medium">JMC Church, Rongai</p>
+                <div className="w-10 sm:w-12 h-0.5 bg-wedding-gold mx-auto"></div>
+                
+                {/* Bible Verse */}
+                <motion.div 
+                  className="bg-pink-50/50 rounded-lg p-2 sm:p-3 my-3 sm:my-4"
+                  initial={{ opacity: 0 }}
+                  animate={animationStep >= 4 ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ delay: 2.2, duration: 1 }}
+                >
+                  <p className="font-playfair text-xs sm:text-sm text-wedding-charcoal italic leading-relaxed">
+                    "Love is patient and kind; love does not envy or boast; it is not arrogant."
+                  </p>
+                  <p className="font-playfair text-xs text-wedding-gold font-semibold mt-1">
+                    — 1 Corinthians 13:4
+                  </p>
+                </motion.div>
+                
+                <div className="space-y-1">
+                  <p className="font-playfair text-base sm:text-lg md:text-xl text-wedding-charcoal font-semibold">July 29th, 2025</p>
+                  <p className="font-playfair text-xs sm:text-sm text-wedding-charcoal">4:00 PM</p>
+                  <p className="font-playfair text-xs sm:text-sm text-wedding-charcoal font-medium">JMC Church, Rongai</p>
+                </div>
               </motion.div>
               
               {/* Enter Button */}
@@ -240,11 +263,11 @@ export function EnvelopeAnimation() {
                 initial={{ opacity: 0, y: 30, scale: 0.8 }}
                 animate={showEnterButton ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.8 }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
-                className="mt-8"
+                className="mt-3 sm:mt-4"
               >
                 <Button
                   onClick={handleEnterSite}
-                  className="bg-gradient-to-r from-wedding-gold to-wedding-dark-gold hover:from-wedding-dark-gold hover:to-wedding-gold text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  className="bg-gradient-to-r from-wedding-pink to-pink-400 hover:from-pink-400 hover:to-wedding-pink text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
                   Enter Our Story
                 </Button>
