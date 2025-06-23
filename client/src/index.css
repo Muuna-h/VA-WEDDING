@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(210, 14%, 29%);
+  --muted: hsl(330, 20%, 95%);
+  --muted-foreground: hsl(215, 8%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 14%, 29%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 14%, 29%);
+  --border: hsl(330, 15%, 85%);
+  --input: hsl(330, 15%, 85%);
+  --primary: hsl(51, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(330, 68%, 85%);
+  --secondary-foreground: hsl(210, 14%, 29%);
+  --accent: hsl(330, 68%, 85%);
+  --accent-foreground: hsl(210, 14%, 29%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(60, 9%, 98%);
+  --ring: hsl(210, 14%, 29%);
+  --radius: 0.5rem;
+  
+  /* Wedding theme colors */
+  --wedding-pink: hsl(330, 68%, 85%);
+  --wedding-gold: hsl(51, 100%, 50%);
+  --wedding-blush: hsl(330, 100%, 88%);
+  --wedding-dark-gold: hsl(43, 74%, 42%);
+  --wedding-charcoal: hsl(210, 14%, 29%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 4%, 16%);
+  --muted-foreground: hsl(240, 5%, 65%);
+  --popover: hsl(240, 10%, 4%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 4%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 4%, 16%);
+  --input: hsl(240, 4%, 16%);
+  --primary: hsl(51, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 4%, 16%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 4%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 5%, 84%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .font-great-vibes {
+    font-family: 'Great Vibes', cursive;
+  }
+  
+  .envelope-3d {
+    background: linear-gradient(135deg, hsl(51, 100%, 50%) 0%, hsl(43, 74%, 42%) 50%, hsl(51, 100%, 50%) 100%);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+  
+  .envelope-flap {
+    background: linear-gradient(135deg, hsl(51, 100%, 50%) 0%, hsl(43, 74%, 42%) 100%);
+    transform-origin: bottom;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+  
+  .heart-seal {
+    background: radial-gradient(circle, hsl(51, 100%, 50%) 0%, hsl(43, 74%, 42%) 100%);
+  }
+  
+  .invitation-card {
+    background: linear-gradient(to bottom, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .section-divider {
+    background: linear-gradient(90deg, transparent 0%, hsl(330, 68%, 85%) 50%, transparent 100%);
+    height: 1px;
+    margin: 4rem 0;
+  }
+}
+
+@layer utilities {
+  .animate-swing-down {
+    animation: swingDown 3s ease-out forwards;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-sparkle {
+    animation: sparkle 1s ease-out forwards;
+  }
+  
+  .animate-envelope-open {
+    animation: envelopeOpen 1.5s ease-out forwards;
+  }
+  
+  .animate-card-slide {
+    animation: cardSlide 2s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-fall {
+    animation: fall linear infinite;
+  }
+}
+
+@keyframes swingDown {
+  0% { transform: translateY(-100vh) rotate(-10deg); opacity: 0; }
+  50% { transform: translateY(-50vh) rotate(5deg); opacity: 0.8; }
+  80% { transform: translateY(-10vh) rotate(-2deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+  to { box-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.3); }
+}
+
+@keyframes sparkle {
+  0% { transform: scale(1) rotate(0deg); opacity: 1; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+  100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes envelopeOpen {
+  0% { transform: rotateX(0deg); }
+  100% { transform: rotateX(-90deg); }
+}
+
+@keyframes cardSlide {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  50% { transform: translateY(-50px) scale(0.9); opacity: 0.8; }
+  100% { transform: translateY(-100px) scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fall {
+  from { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+  to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.petal {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+}

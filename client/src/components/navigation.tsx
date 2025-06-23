@@ -1,0 +1,95 @@
+import { useState } from "react";
+import { Link, useLocation } from "wouter";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const navItems = [
+  { href: "/home", label: "Home" },
+  { href: "/details", label: "Details" },
+  { href: "/countdown", label: "Countdown" },
+  { href: "/rsvp", label: "RSVP" },
+  { href: "/story", label: "Our Story" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/registry", label: "Registry" },
+  { href: "/contact", label: "Contact" },
+];
+
+export function Navigation() {
+  const [location] = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  return (
+    <>
+      <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-40 shadow-sm">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <Link href="/home">
+              <div className="font-dancing text-2xl text-wedding-gold cursor-pointer hover:text-wedding-dark-gold transition-colors">
+                V & A
+              </div>
+            </Link>
+            
+            <div className="hidden md:flex space-x-8">
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href}>
+                  <a className={`nav-link hover:text-wedding-pink transition-colors ${
+                    location === item.href ? "text-wedding-pink font-semibold" : ""
+                  }`}>
+                    {item.label}
+                  </a>
+                </Link>
+              ))}
+            </div>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
+            </Button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed top-0 left-0 right-0 bg-white z-50 md:hidden"
+          >
+            <div className="container mx-auto px-4 py-8">
+              <div className="flex justify-between items-center mb-8">
+                <div className="font-dancing text-2xl text-wedding-gold">V & A</div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <X />
+                </Button>
+              </div>
+              <div className="space-y-6">
+                {navItems.map((item) => (
+                  <Link key={item.href} href={item.href}>
+                    <a
+                      className="block text-lg hover:text-wedding-pink transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
