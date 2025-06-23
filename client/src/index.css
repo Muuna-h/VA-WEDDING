@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap');
 
 :root {
   --background: hsl(0, 0%, 100%);
@@ -81,23 +81,74 @@
   }
   
   .envelope-3d {
-    background: linear-gradient(135deg, hsl(51, 100%, 50%) 0%, hsl(43, 74%, 42%) 50%, hsl(51, 100%, 50%) 100%);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, hsl(51, 100%, 60%) 0%, hsl(43, 74%, 50%) 30%, hsl(51, 100%, 65%) 70%, hsl(43, 74%, 45%) 100%);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3), 0 0 30px rgba(255, 215, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .envelope-3d::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+    animation: shimmer 3s infinite;
   }
   
   .envelope-flap {
-    background: linear-gradient(135deg, hsl(51, 100%, 50%) 0%, hsl(43, 74%, 42%) 100%);
+    background: linear-gradient(135deg, hsl(51, 100%, 60%) 0%, hsl(43, 74%, 50%) 100%);
     transform-origin: bottom;
     clip-path: polygon(0 0, 100% 0, 50% 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .envelope-flap::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%);
+    animation: shimmer 2.5s infinite;
   }
   
   .heart-seal {
-    background: radial-gradient(circle, hsl(51, 100%, 50%) 0%, hsl(43, 74%, 42%) 100%);
+    background: radial-gradient(circle, hsl(330, 68%, 75%) 0%, hsl(330, 68%, 65%) 50%, hsl(330, 68%, 55%) 100%);
+    box-shadow: 0 0 20px rgba(248, 187, 217, 0.6);
   }
   
   .invitation-card {
-    background: linear-gradient(to bottom, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, hsl(0, 0%, 98%) 0%, hsl(330, 100%, 98%) 20%, hsl(0, 0%, 100%) 50%, hsl(51, 100%, 98%) 80%, hsl(0, 0%, 98%) 100%);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15), 0 0 25px rgba(248, 187, 217, 0.3);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .invitation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, hsl(51, 100%, 50%) 0%, hsl(330, 68%, 75%) 50%, hsl(51, 100%, 50%) 100%);
+  }
+  
+  .invitation-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, hsl(51, 100%, 50%) 0%, hsl(330, 68%, 75%) 50%, hsl(51, 100%, 50%) 100%);
   }
   
   .section-divider {
@@ -118,6 +169,10 @@
   
   .animate-sparkle {
     animation: sparkle 1s ease-out forwards;
+  }
+  
+  .animate-twinkle {
+    animation: twinkle 2s ease-in-out infinite;
   }
   
   .animate-envelope-open {
@@ -185,11 +240,26 @@
   to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
 }
 
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(200%) rotate(45deg); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
 .petal {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background: white;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(248,187,217,0.7) 100%);
   border-radius: 50%;
   pointer-events: none;
+  box-shadow: 0 0 6px rgba(248,187,217,0.5);
+}
+
+.sparkle-glow {
+  animation: twinkle 1.5s ease-in-out infinite;
 }
