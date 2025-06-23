@@ -1,0 +1,66 @@
+Envelope Animation – "Vanessa & Augustine's Invite"
+🌸 Theme Integration
+
+    Colour: The envelope should match your wedding theme: soft pink exterior with a golden seal and white satin interior.
+
+    Style: Modern yet elegant, like a real luxury invitation envelope.
+
+🖼️ Visual Description
+Element	Details
+Envelope Front	Light pink envelope with a heart-shaped golden wax seal in the center. The seal has a subtle “VA” monogram engraved.
+Ribbon or Sparkles	Gold shimmer or light sparkles around it to feel magical.
+Background	A romantic church aisle (blurred), white rose petals gently falling, soft lighting.
+Music	Soft wedding instrumental (e.g., harp or piano) auto-plays on interaction.
+Typography on Envelope	Small text under the seal: "You're Invited..." in a cursive font (e.g., “Great Vibes”).
+🎞️ Animation Sequence (Step-by-Step)
+🎬 1. Entrance
+
+    The envelope swings in gently from the top, as if gliding down the church aisle.
+
+    It slightly tilts left and right, mimicking a gentle breeze or magical float.
+
+    Framer Motion or GSAP can be used for easing and rotation.
+
+🎼 2. Landing at the Altar
+
+    The envelope lands gracefully at the center of the screen, as if it reached the altar.
+
+    A subtle glow appears around it, indicating something special is about to happen.
+
+    Optional: White flower petals or glitter lightly fall.
+
+💥 3. Seal Pops & Envelope Opens
+
+    The gold seal pops off with a tiny sparkle animation (scale+fade).
+
+    Envelope flap lifts upwards, revealing a shining white paper inside.
+
+✨ 4. Invitation Card Slides Out
+
+    A folded card slides out of the envelope gently and unfolds with a bounce, revealing the invitation message:
+
+        “You're invited to celebrate the union of Vanessa & Augustine…”
+
+    Text appears with a fade-in + typewriter or letter-by-letter animation.
+
+🎮 5. Transition to Site
+
+    After 5–8 seconds (or on click), the card gently floats upward, revealing the rest of the page: RSVP, Event Details, etc.
+
+    The music continues playing (toggle visible to mute/unmute).
+
+🧩 Dev Notes (How to Build This)
+
+    Use Framer Motion motion.div and variants for entrance, rotation, scale, and fade effects.
+
+    Use absolute positioning to simulate floating movement.
+
+    Add z-index layering for envelope flap, seal, and invitation card.
+
+    Make sure animations are responsive (looks good on mobile and desktop).
+
+🎁 Optional Enhancement
+
+    Add confetti pop when the envelope opens for a joyful feel.
+
+    Background can gently blur when the envelope is centered, focusing attention on the animation.
