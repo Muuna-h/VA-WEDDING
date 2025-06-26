@@ -7,26 +7,21 @@ export function MusicToggle() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = new Audio("/final.mp3");
-    audio.loop = true;
-    audio.volume = 1.0;
-    audio.muted = true; // Start muted for autoplay
+    audioRef.current = new Audio("/final.mp3"); // Use the correct relative path
+    audioRef.current.loop = true;
+    audioRef.current.volume = 1.0;
 
-    audio
-      .play()
-      .then(() => {
-        audio.muted = false; // Unmute after successful autoplay
-        setIsPlaying(true);
-      })
-      .catch((err) => {
-        console.warn("Autoplay failed. User interaction required.", err);
-        setIsPlaying(false);
-      });
-
-    audioRef.current = audio;
+    // Attempt to play music automatically
+    audioRef.current.play().then(() => {
+      setIsPlaying(true);
+    }).catch((err) => {
+      console.error("Autoplay failed:", err);
+      // Autoplay failed, keep isPlaying as false, user can manually play
+      setIsPlaying(false);
+    });
 
     return () => {
-      audio.pause();
+      audioRef.current?.pause();
       audioRef.current = null;
     };
   }, []);
@@ -36,17 +31,13 @@ export function MusicToggle() {
 
     if (isPlaying) {
       audioRef.current.pause();
-      setIsPlaying(false);
     } else {
-      audioRef.current
-        .play()
-        .then(() => {
-          setIsPlaying(true);
-        })
-        .catch((err) => {
-          console.error("Audio playback failed:", err);
-        });
+      audioRef.current.play().catch((err) => {
+        console.error("Audio playback failed:", err);
+      });
     }
+
+    setIsPlaying(!isPlaying);
   };
 
   return (
