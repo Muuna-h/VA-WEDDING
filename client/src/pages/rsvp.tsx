@@ -18,7 +18,7 @@ export default function RSVP() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="font-playfair text-4xl md:text-5xl text-wedding-charcoal mb-4">
+            <h2 className="font-playfair text-4xl md:text-5xl  text-[#d4af37] mb-4">
               RSVP
             </h2>
             <div className="w-24 h-1 bg-wedding-gold mx-auto mb-6" />
@@ -35,7 +35,7 @@ export default function RSVP() {
           >
             <Card className="bg-gradient-to-br from-pink-50 to-white shadow-lg">
               <CardContent className="p-8">
-                <form action="https://formsubmit.co/vanessa.augustine@wedding.com" method="POST" className="space-y-6">
+                <form action="https://formsubmit.co/vdvanessad@gmail.com" method="POST" className="space-y-6">
                   <input type="hidden" name="_subject" value="Wedding RSVP - Vanessa & Augustine" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_next" value={`${window.location.origin}/home?rsvp=success`} />
@@ -104,16 +104,6 @@ export default function RSVP() {
                     </Select>
                   </div>
                   
-                  <div>
-                    <Label htmlFor="dietary_restrictions">Dietary Restrictions</Label>
-                    <Textarea 
-                      name="dietary_restrictions" 
-                      id="dietary_restrictions"
-                      placeholder="Please let us know about any allergies or dietary preferences..."
-                      className="mt-2 resize-none"
-                      rows={3}
-                    />
-                  </div>
                   
                   <div>
                     <Label htmlFor="message">Special Message</Label>
@@ -128,7 +118,7 @@ export default function RSVP() {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-wedding-gold hover:bg-wedding-dark-gold text-white py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-wedding-gold hover:bg-wedding-dark-gold  text-[#d4af37] py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
                   >
                     Send RSVP
                   </Button>

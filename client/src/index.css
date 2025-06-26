@@ -130,9 +130,40 @@
   }
   
   .heart-seal {
-    background: radial-gradient(circle, hsl(330, 68%, 75%) 0%, hsl(330, 68%, 65%) 50%, hsl(330, 68%, 55%) 100%);
-    box-shadow: 0 0 20px rgba(248, 187, 217, 0.6);
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background: radial-gradient(
+      circle,
+      hsl(330, 93%, 88%) 0%,
+      hsl(330, 93%, 78%) 50%,
+      hsl(330, 93%, 68%) 100%
+    );
+    box-shadow: 0 0 20px rgba(254, 197, 229, 0.6);
+    transform: rotate(-45deg);
+    margin: 50px auto;
   }
+
+  .heart-seal::before,
+  .heart-seal::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    background: inherit;
+    border-radius: 50%;
+  }
+
+  .heart-seal::before {
+    top: -50px;
+    left: 0;
+  }
+
+  .heart-seal::after {
+    top: 0;
+    left: 50px;
+  }
+
   
   .invitation-card {
     background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(330, 100%, 99%) 15%, hsl(0, 0%, 98%) 35%, hsl(330, 100%, 99%) 65%, hsl(0, 0%, 100%) 100%);

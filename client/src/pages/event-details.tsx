@@ -14,10 +14,10 @@ export default function EventDetails() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="font-playfair text-4xl md:text-5xl text-wedding-charcoal mb-4">
+            <h2 className="font-playfair text-4xl md:text-5xl text-[#FEC5E5] mb-4">
               Wedding Details
             </h2>
-            <div className="w-24 h-1 bg-wedding-gold mx-auto" />
+            <div className="w-24 h-1 bg-[#d4af37] mx-auto" />
           </motion.div>
           
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -30,26 +30,26 @@ export default function EventDetails() {
               <Card className="bg-white shadow-lg transform hover:scale-105 transition-transform duration-300">
                 <CardContent className="p-8">
                   <div className="text-center mb-6">
-                    <Church className="w-12 h-12 text-wedding-gold mx-auto mb-4" />
+                    <Church className="w-12 h-12 text-[#d4af37] mx-auto mb-4" />
                     <h3 className="font-playfair text-2xl text-wedding-charcoal mb-2">
                       Ceremony
                     </h3>
                   </div>
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <Calendar className="w-5 h-5 text-wedding-pink mr-3" />
-                      <span>Tuesday, July 29th, 2025</span>
+                      <Calendar className="w-5 h-5 text-[#FEC5E5] mr-3" />
+                      <span>Saturday, August 2nd, 2025</span>
                     </div>
                     <div className="flex items-center">
-                      <Clock className="w-5 h-5 text-wedding-pink mr-3" />
+                      <Clock className="w-5 h-5 text-[#FEC5E5] mr-3" />
                       <span>{VENUE_INFO.ceremony.time}</span>
                     </div>
                     <div className="flex items-center">
-                      <MapPin className="w-5 h-5 text-wedding-pink mr-3" />
+                      <MapPin className="w-5 h-5 text-[#FEC5E5] mr-3" />
                       <span>{VENUE_INFO.ceremony.name}, {VENUE_INFO.ceremony.location}</span>
                     </div>
                     <div className="flex items-center">
-                      <Users className="w-5 h-5 text-wedding-pink mr-3" />
+                      <Users className="w-5 h-5 text-[#FEC5E5] mr-3" />
                       <span>Formal Attire Requested</span>
                     </div>
                   </div>
@@ -66,26 +66,26 @@ export default function EventDetails() {
               <Card className="bg-white shadow-lg transform hover:scale-105 transition-transform duration-300">
                 <CardContent className="p-8">
                   <div className="text-center mb-6">
-                    <Utensils className="w-12 h-12 text-wedding-gold mx-auto mb-4" />
+                    <Utensils className="w-12 h-12  text-[#d4af37] mx-auto mb-4" />
                     <h3 className="font-playfair text-2xl text-wedding-charcoal mb-2">
                       Reception
                     </h3>
                   </div>
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <Calendar className="w-5 h-5 text-wedding-pink mr-3" />
-                      <span>Tuesday, July 29th, 2025</span>
+                      <Calendar className="w-5 h-5 text-[#FEC5E5] mr-3" />
+                      <span>Saturday, August 2nd, 2025</span>
                     </div>
                     <div className="flex items-center">
-                      <Clock className="w-5 h-5 text-wedding-pink mr-3" />
+                      <Clock className="w-5 h-5 text-[#FEC5E5] mr-3" />
                       <span>{VENUE_INFO.reception.time}</span>
                     </div>
                     <div className="flex items-center">
-                      <MapPin className="w-5 h-5 text-wedding-pink mr-3" />
+                      <MapPin className="w-5 h-5 text-[#FEC5E5] mr-3" />
                       <span>{VENUE_INFO.reception.name}, {VENUE_INFO.reception.location}</span>
                     </div>
                     <div className="flex items-center">
-                      <Utensils className="w-5 h-5 text-wedding-pink mr-3" />
+                      <Utensils className="w-5 h-5 text-[#FEC5E5] mr-3" />
                       <span>Dinner & Dancing</span>
                     </div>
                   </div>

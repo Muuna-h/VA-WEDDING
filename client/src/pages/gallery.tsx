@@ -12,7 +12,7 @@ const galleryImages = [
 export default function Gallery() {
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#FEC5E5]/30">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -20,11 +20,11 @@ export default function Gallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="font-playfair text-4xl md:text-5xl text-wedding-charcoal mb-4">
+            <h2 className="font-playfair text-4xl md:text-5xl  text-[#d4af37] mb-4">
               Our Moments
             </h2>
-            <div className="w-24 h-1 bg-wedding-gold mx-auto mb-6" />
-            <p className="text-lg text-wedding-charcoal">
+            <div className="w-24 h-1 bg-[#d4af37] mx-auto mb-6" />
+            <p className="text-lg text-[#d4af37]">
               A glimpse into our journey together
             </p>
           </motion.div>

@@ -13,12 +13,12 @@ export default function Home() {
             backgroundImage: "url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
           }}
         >
-          <div className="absolute inset-0 bg-white/60" />
+          <div className="absolute inset-0 bg-[#d4af37]/30" />
         </div>
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <motion.h1 
-            className="font-dancing text-6xl md:text-8xl text-wedding-gold mb-6"
+            className="font-dancing text-6xl md:text-8xl  text-[#FEC5E5] mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -27,16 +27,16 @@ export default function Home() {
           </motion.h1>
           
           <motion.p 
-            className="font-playfair text-2xl md:text-3xl text-wedding-charcoal mb-8"
+            className="font-playfair text-2xl md:text-3xl text-white mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            July 29th, 2025
+            August 2nd, 2025
           </motion.p>
           
           <motion.p 
-            className="font-inter text-lg md:text-xl text-wedding-charcoal mb-12"
+            className="font-inter text-lg md:text-xl text-white mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}

@@ -6,13 +6,12 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { href: "/home", label: "Home" },
-  { href: "/details", label: "Details" },
+  { href: "/details", label: "Program" },
   { href: "/countdown", label: "Countdown" },
   { href: "/rsvp", label: "RSVP" },
   { href: "/story", label: "Our Story" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/registry", label: "Registry" },
-  { href: "/contact", label: "Contact" },
+
 ];
 
 export function Navigation() {
@@ -25,7 +24,7 @@ export function Navigation() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/home">
-              <div className="font-dancing text-2xl text-wedding-gold cursor-pointer hover:text-wedding-dark-gold transition-colors">
+              <div className="font-dancing text-2xl  text-[#d4af37] cursor-pointer hover:text-wedding-dark-gold transition-colors">
                 V & A
               </div>
             </Link>
@@ -33,8 +32,8 @@ export function Navigation() {
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href}>
-                  <a className={`nav-link hover:text-wedding-pink transition-colors ${
-                    location === item.href ? "text-wedding-pink font-semibold" : ""
+                  <a className={`nav-link hover: text-[#d4af37] transition-colors ${
+                    location === item.href ? " text-[#d4af37] font-semibold" : ""
                   }`}>
                     {item.label}
                   </a>

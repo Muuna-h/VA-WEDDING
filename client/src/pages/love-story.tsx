@@ -27,7 +27,7 @@ const storyEvents = [
 export default function LoveStory() {
   return (
     <div className="min-h-screen pt-20">
-      <section className="py-20 bg-gradient-to-b from-white to-pink-50">
+      <section className="py-20 bg-gradient-to-b from-white to-[#FEC5E5]/50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -35,10 +35,10 @@ export default function LoveStory() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="font-playfair text-4xl md:text-5xl text-wedding-charcoal mb-4">
+            <h2 className="font-playfair text-4xl md:text-5xl  text-[#d4af37] mb-4">
               Our Love Story
             </h2>
-            <div className="w-24 h-1 bg-wedding-gold mx-auto" />
+            <div className="w-24 h-1 bg- text-[#d4af37] mx-auto" />
           </motion.div>
           
           <div className="max-w-4xl mx-auto">

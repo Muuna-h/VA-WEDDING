@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Navigation } from "@/components/navigation";
 import { MusicToggle } from "@/components/music-toggle";
-import Landing from "@/pages/landing";
+import Landing from "@/pages/invitation";
 import Home from "@/pages/home";
 import EventDetails from "@/pages/event-details";
 import Countdown from "@/pages/countdown";
@@ -19,8 +19,8 @@ import NotFound from "@/pages/not-found";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={() => <Redirect to="/landing" />} />
-      <Route path="/landing" component={Landing} />
+      <Route path="/" component={() => <Redirect to="/invitation" />} />
+      <Route path="/invitation" component={Landing} />
       <Route path="/home">
         <Navigation />
         <MusicToggle />
