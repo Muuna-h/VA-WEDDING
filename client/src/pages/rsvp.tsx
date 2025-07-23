@@ -9,20 +9,20 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 export default function RSVP() {
   return (
-    <div className="min-h-screen pt-20">
-      <section className="py-20 bg-white">
+    <div className="min-h-screen pt-16 sm:pt-20">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="font-playfair text-4xl md:text-5xl  text-[#d4af37] mb-4">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl text-[#d4af37] mb-4">
               RSVP
             </h2>
-            <div className="w-24 h-1 bg-wedding-gold mx-auto mb-6" />
-            <p className="text-lg text-wedding-charcoal max-w-2xl mx-auto">
+            <div className="w-20 sm:w-24 h-1 bg-wedding-gold mx-auto mb-4 sm:mb-6" />
+            <p className="text-base sm:text-lg text-wedding-charcoal max-w-2xl mx-auto">
               We can't wait to celebrate with you! Please let us know if you'll be joining us on our special day.
             </p>
           </motion.div>
@@ -34,31 +34,31 @@ export default function RSVP() {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <Card className="bg-gradient-to-br from-pink-50 to-white shadow-lg">
-              <CardContent className="p-8">
-                <form action="https://formsubmit.co/vdvanessad@gmail.com" method="POST" className="space-y-6">
+              <CardContent className="p-4 sm:p-8">
+                <form action="https://formsubmit.co/vdvanessad@gmail.com" method="POST" className="space-y-4 sm:space-y-6">
                   <input type="hidden" name="_subject" value="Wedding RSVP - Vanessa & Augustine" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_next" value={`${window.location.origin}/home?rsvp=success`} />
                   
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
-                      <Label htmlFor="first_name">First Name *</Label>
+                      <Label htmlFor="first_name" className="text-sm sm:text-base">First Name *</Label>
                       <Input 
                         type="text" 
                         name="first_name" 
                         id="first_name"
                         required 
-                        className="mt-2"
+                        className="mt-1 sm:mt-2"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="last_name">Last Name *</Label>
+                      <Label htmlFor="last_name" className="text-sm sm:text-base">Last Name *</Label>
                       <Input 
                         type="text" 
                         name="last_name" 
                         id="last_name"
                         required 
-                        className="mt-2"
+                        className="mt-1 sm:mt-2"
                       />
                     </div>
                   </div>
@@ -118,7 +118,7 @@ export default function RSVP() {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-wedding-gold hover:bg-wedding-dark-gold  text-[#d4af37] py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-wedding-gold hover:bg-wedding-dark-gold text-[#d4af37] py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105"
                   >
                     Send RSVP
                   </Button>

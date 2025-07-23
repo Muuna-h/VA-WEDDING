@@ -13,12 +13,12 @@ export const VENUE_INFO = {
   ceremony: {
     name: "Terabella Gardens",
     location: "Ongata Rongai",
-    time: "9:00 AM To 12:00 PM",
+    time: "11:00 AM To 4:00 PM",
   },
   reception: {
     name: "Terabella Gardens",
     location: "Ongata Rongai",
-    time: "12:00 PM To 5:00 PM",
+    time: "11:00 PM To 4:00 PM",
   },
 } as const;
 
@@ -31,5 +31,5 @@ export const CONTACT_INFO = {
     name: "Augustine",
     phone: "+254 700 000 002",
   },
-  email: "vanessa.augustine@wedding.com",
+  email: "vdvanessad@gmail.com",
 } as const;

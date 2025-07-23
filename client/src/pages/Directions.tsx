@@ -6,32 +6,32 @@ import { VENUE_INFO, CONTACT_INFO } from "@/lib/constants";
 
 export default function Directions() {
   return (
-    <div className="min-h-screen pt-20">
-      <section className="py-20 bg-white">
+    <div className="min-h-screen pt-16 sm:pt-20">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="font-playfair text-4xl md:text-5xl text-wedding-charcoal mb-4">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl text-wedding-charcoal mb-4">
               Location & Contact
             </h2>
-            <div className="w-24 h-1 bg-wedding-gold mx-auto" />
+            <div className="w-20 sm:w-24 h-1 bg-wedding-gold mx-auto" />
           </motion.div>
           
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 max-w-6xl mx-auto">
             {/* Contact Information */}
             <motion.div 
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
               <Card className="bg-gradient-to-br from-pink-50 to-white shadow-lg">
-                <CardContent className="p-8">
-                  <h3 className="font-playfair text-2xl text-wedding-charcoal mb-6">
+                <CardContent className="p-6 sm:p-8">
+                  <h3 className="font-playfair text-xl sm:text-2xl text-wedding-charcoal mb-4 sm:mb-6">
                     Wedding Venue
                   </h3>
                   <div className="space-y-4">
@@ -121,7 +121,7 @@ export default function Directions() {
             
             {/* Google Maps Embed */}
             <motion.div 
-              className="rounded-lg shadow-lg overflow-hidden h-96 lg:h-full min-h-[600px]"
+              className="rounded-lg shadow-lg overflow-hidden h-[520px] sm:h-96 lg:h-full min-h-[520px] sm:min-h-[600px]"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
@@ -140,46 +140,38 @@ export default function Directions() {
         </div>
       </section>
       
-      {/* Footer */}
-      <footer className="bg-gradient-to-r from-wedding-pink to-wedding-gold text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div 
-            className="mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <h3 className="font-dancing text-4xl mb-4">Vanessa & Augustine</h3>
-            <p className="text-lg opacity-90">July 29th, 2025</p>
-          </motion.div>
-          
-          <motion.p 
-            className="opacity-75 text-sm sm:text-base md:text-lg text-[#d4af37] max-w-md mx-auto mt-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
+      {/* Simple Heart Statement */}
+      <div className="bg-white py-6 sm:py-8 text-center relative">
+        <motion.div 
+          className="container mx-auto px-4 flex flex-col items-center justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="relative inline-flex items-center flex-wrap justify-center">
+            <span className="text-xl sm:text-2xl text-[#d4af37] mr-2">Made with</span>
+            
             {/* Heart Seal */}
             <div 
-              className="absolute top-16 sm:top-20 md:top-24 left-1/2 flex items-center justify-center z-10"
+              className="inline-flex items-center justify-center relative mx-2"
               style={{
-                transform: "translateX(-57%) rotate(-45deg)",
                 background: "#FEC5E5",
-                boxShadow: "0 0 20px rgba(254, 197, 229, 0.6)",
-                width: "56px",
-                height: "56px",
+                boxShadow: "0 0 10px rgba(254, 197, 229, 0.6)",
+                width: "40px",
+                height: "40px",
                 position: "relative",
+                transform: "rotate(-45deg)",
               }}
             >
               {/* Left lobe */}
               <div
                 style={{
                   position: "absolute",
-                  width: "56px",
-                  height: "56px",
+                  width: "40px",
+                  height: "40px",
                   background: "#FEC5E5",
                   borderRadius: "50%",
-                  top: "-32px",
+                  top: "-24px",
                   left: "0px",
                 }}
               />
@@ -187,30 +179,31 @@ export default function Directions() {
               <div
                 style={{
                   position: "absolute",
-                  width: "56px",
-                  height: "56px",
+                  width: "40px",
+                  height: "40px",
                   background: "#FEC5E5",
                   borderRadius: "50%",
                   top: "0px",
-                  left: "32px",
+                  left: "24px",
                 }}
               />
               {/* Inner Text */}
               <div
                 style={{
                   transform: "rotate(45deg)",
-                  zIndex: 10,
+                  zIndex: 9,
                   textAlign: "center",
                 }}
-                className="font-dancing text-sm sm:text-base md:text-lg text-[#d4af37] mb-3 sm:mb-4 drop-shadow-sm"
+                className="font-dancing text-2xl text-[white] drop-shadow-sm"
               >
-                V&A
+                Heart
               </div>
             </div>
-            for our special day
-          </motion.p>
-        </div>
-      </footer>
+            
+            <span className="text-xl sm:text-2xl text-[#d4af37] ml-2">for Our Special Day</span>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }

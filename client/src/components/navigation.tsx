@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { href: "/home", label: "Home" },
-  { href: "/details", label: "Program" },
+  { href: "/details", label: "View Details" },
   { href: "/countdown", label: "Countdown" },
   { href: "/rsvp", label: "RSVP" },
   { href: "/directions", label: "Directions" }
@@ -71,11 +71,11 @@ export function Navigation() {
                   <X />
                 </Button>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-20">
                 {navItems.map((item) => (
                   <Link key={item.href} href={item.href}>
                     <a
-                      className="block text-lg hover:text-[#d4af37] transition-colors"
+                      className="block text-lg text-[#d4af37] hover:text-[#fec5e5] transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
