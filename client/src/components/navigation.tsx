@@ -9,8 +9,7 @@ const navItems = [
   { href: "/details", label: "Program" },
   { href: "/countdown", label: "Countdown" },
   { href: "/rsvp", label: "RSVP" },
-
-
+  { href: "/directions", label: "Directions" }
 ];
 
 export function Navigation() {

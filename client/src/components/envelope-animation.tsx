@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
+import { VENUE_INFO } from "@/lib/constants";
 
 interface PetalProps {
   delay: number;
@@ -335,10 +336,10 @@ export function EnvelopeAnimation() {
                     August 2nd, 2025
                   </p>
                   <p className="font-playfair text-xs sm:text-sm text-[#d4af37]">
-                    8:00 AM
+                    {VENUE_INFO.ceremony.time}
                   </p>
                   <p className="font-playfair text-xs sm:text-sm text-[#d4af37] font-medium">
-                    Rongai
+                    Terabella Gardens, Ongata Rongai
                   </p>
                 </div>
               </motion.div>

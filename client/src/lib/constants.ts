@@ -11,14 +11,14 @@ export const WEDDING_COLORS = {
 
 export const VENUE_INFO = {
   ceremony: {
-    name: "Updated soon",
-    location: "Updated soon",
-    time: "Updated soon",
+    name: "Terabella Gardens",
+    location: "Ongata Rongai",
+    time: "9:00 AM To 12:00 PM",
   },
   reception: {
-    name: "Updated soon",
-    location: "Updated soon",
-    time: "Updated soon",
+    name: "Terabella Gardens",
+    location: "Ongata Rongai",
+    time: "12:00 PM To 5:00 PM",
   },
 } as const;
 

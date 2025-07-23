@@ -12,8 +12,7 @@ import Countdown from "@/pages/countdown";
 import RSVP from "@/pages/rsvp";
 import LoveStory from "@/pages/love-story";
 import Gallery from "@/pages/gallery";
-import GiftRegistry from "@/pages/gift-registry";
-import Contact from "@/pages/contact";
+import Directions from "@/pages/Directions";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -51,15 +50,10 @@ function Router() {
         <MusicToggle />
         <Gallery />
       </Route>
-      <Route path="/registry">
+      <Route path="/directions">
         <Navigation />
         <MusicToggle />
-        <GiftRegistry />
-      </Route>
-      <Route path="/contact">
-        <Navigation />
-        <MusicToggle />
-        <Contact />
+        <Directions />
       </Route>
       <Route component={NotFound} />
     </Switch>

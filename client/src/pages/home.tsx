@@ -41,7 +41,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Join us as we celebrate our love story at Updated Soon
+            Join us as we celebrate our love story, FROM 9:00 AM at Terabella Gardens, Ongata Rongai
           </motion.p>
           
           <motion.div 
@@ -51,16 +51,24 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.6 }}
           >
             <Link href="/details">
-              <Button className="bg-wedding-gold hover:bg-wedding-dark-gold text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+              <Button className="bg-[#d4af37] hover:bg-[#fec5e5] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
                 View Details
               </Button>
             </Link>
             <Link href="/rsvp">
               <Button 
                 variant="outline"
-                className="border-2 border-wedding-pink text-wedding-pink hover:bg-wedding-pink hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                className="bg-[#fec5e5] border-2 border-[#fec5e5] text-wedding-pink hover:bg-[#fec5e5] hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 RSVP Now
+              </Button>
+            </Link>
+            <Link href="/directions">
+              <Button 
+                variant="outline"
+                className="border-2 border-wedding-pink text-wedding-pink hover:bg-[#fec5e5] hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+              >
+                Directions
               </Button>
             </Link>
           </motion.div>

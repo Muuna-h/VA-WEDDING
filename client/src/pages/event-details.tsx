@@ -42,11 +42,11 @@ export default function EventDetails() {
                     </div>
                     <div className="flex items-center">
                       <Clock className="w-5 h-5 text-[#FEC5E5] mr-3" />
-                      <span>Updated soon</span>
+                      <span>{VENUE_INFO.ceremony.time}</span>
                     </div>
                     <div className="flex items-center">
                       <MapPin className="w-5 h-5 text-[#FEC5E5] mr-3" />
-                      <span>Updated soon</span>
+                      <span className="font-semibold">Terrabella Gardens - Ongata Rongai</span>
                     </div>
                     <div className="flex items-center">
                       <Users className="w-5 h-5 text-[#FEC5E5] mr-3" />
@@ -78,11 +78,11 @@ export default function EventDetails() {
                     </div>
                     <div className="flex items-center">
                       <Clock className="w-5 h-5 text-[#FEC5E5] mr-3" />
-                      <span>Updated soon</span>
+                      <span>{VENUE_INFO.reception.time}</span>
                     </div>
                     <div className="flex items-center">
                       <MapPin className="w-5 h-5 text-[#FEC5E5] mr-3" />
-                      <span>Updated soon</span>
+                      <span className="font-semibold">Terrabella Gardens - Ongata Rongai</span>
                     </div>
                     <div className="flex items-center">
                       <Utensils className="w-5 h-5 text-[#FEC5E5] mr-3" />
