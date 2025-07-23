@@ -23,7 +23,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            Vanessa & Augustine
+            Vanessa & Augostine
           </motion.h1>
           
           <motion.p 
@@ -41,7 +41,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Join us as we celebrate our love story at JMC Church, Rongai
+            Join us as we celebrate our love story at Updated Soon
           </motion.p>
           
           <motion.div 

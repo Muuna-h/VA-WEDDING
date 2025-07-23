@@ -309,7 +309,7 @@ export function EnvelopeAnimation() {
                   to celebrate the union of
                 </p>
                 <h2 className="font-dancing text-xl sm:text-2xl md:text-3xl text-[#FEC5E5] drop-shadow-sm leading-tight">
-                  Vanessa & Augustine
+                  Vanessah & Augostine
                 </h2>
                 <div className="w-10 sm:w-12 h-0.5 bg-[#d4af37] mx-auto"></div>
 
@@ -320,7 +320,7 @@ export function EnvelopeAnimation() {
                   animate={animationStep >= 4 ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ delay: 2.2, duration: 1 }}
                 >
-                  <p className="font-playfair text-xs sm:text-sm text-[#333] italic leading-relaxed">
+                  <p className="font-playfair text-xs sm:text-sm text-[#d4af37] italic leading-relaxed">
                     "Love is patient and kind; love does not envy or boast; it
                     is not arrogant."
                   </p>
@@ -331,14 +331,14 @@ export function EnvelopeAnimation() {
 
                 {/* Event Details */}
                 <div className="space-y-1">
-                  <p className="font-playfair text-base sm:text-lg md:text-xl text-[#333] font-semibold">
+                  <p className="font-playfair text-base sm:text-lg md:text-xl text-[#d4af37] font-semibold">
                     August 2nd, 2025
                   </p>
-                  <p className="font-playfair text-xs sm:text-sm text-[#333]">
+                  <p className="font-playfair text-xs sm:text-sm text-[#d4af37]">
                     8:00 AM
                   </p>
-                  <p className="font-playfair text-xs sm:text-sm text-[#333] font-medium">
-                    JMC Church, Rongai
+                  <p className="font-playfair text-xs sm:text-sm text-[#d4af37] font-medium">
+                    Rongai
                   </p>
                 </div>
               </motion.div>
@@ -356,7 +356,7 @@ export function EnvelopeAnimation() {
               >
                 <Button
                   onClick={handleEnterSite}
-                  className="bg-[#FEC5E5] hover:bg-[#fbbfdd] text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  className="bg-[#FEC5E5] hover:bg-[#d4af37] text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
                   Enter Our Story
                 </Button>

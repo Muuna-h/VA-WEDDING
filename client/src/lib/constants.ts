@@ -11,14 +11,14 @@ export const WEDDING_COLORS = {
 
 export const VENUE_INFO = {
   ceremony: {
-    name: "JMC Church",
-    location: "Rongai, Kajiado County, Kenya",
-    time: "9:00 AM - 6:00 PM",
+    name: "Updated soon",
+    location: "Updated soon",
+    time: "Updated soon",
   },
   reception: {
-    name: "JMC Church Hall",
-    location: "Rongai, Kajiado County, Kenya",
-    time: "6:00 PM - 11:00 PM",
+    name: "Updated soon",
+    location: "Updated soon",
+    time: "Updated soon",
   },
 } as const;
 

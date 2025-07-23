@@ -9,8 +9,7 @@ const navItems = [
   { href: "/details", label: "Program" },
   { href: "/countdown", label: "Countdown" },
   { href: "/rsvp", label: "RSVP" },
-  { href: "/story", label: "Our Story" },
-  { href: "/gallery", label: "Gallery" },
+
 
 ];
 
@@ -64,7 +63,7 @@ export function Navigation() {
           >
             <div className="container mx-auto px-4 py-8">
               <div className="flex justify-between items-center mb-8">
-                <div className="font-dancing text-2xl text-wedding-gold">V & A</div>
+                <div className="font-dancing text-2xl text-[#d4af37]">V & A</div>
                 <Button
                   variant="ghost"
                   size="icon"
@@ -77,7 +76,7 @@ export function Navigation() {
                 {navItems.map((item) => (
                   <Link key={item.href} href={item.href}>
                     <a
-                      className="block text-lg hover:text-wedding-pink transition-colors"
+                      className="block text-lg hover:text-[#d4af37] transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
