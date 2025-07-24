@@ -18,12 +18,12 @@ export default function Home() {
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <motion.h1 
-            className="font-dancing text-4xl sm:text-6xl md:text-8xl text-[#FEC5E5] mb-4 sm:mb-6"
+            className="font-dancing text-6xl sm:text-6xl md:text-10xl text-[#FEC5E5] mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            Vanessa & Augostine
+            Vanessah & Augostine
           </motion.h1>
           
           <motion.p 
