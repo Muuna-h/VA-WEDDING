@@ -13,23 +13,27 @@ export const VENUE_INFO = {
   ceremony: {
     name: "Terabella Gardens",
     location: "Ongata Rongai",
-    time: "11:00 AM To 4:00 PM",
+    time: "10:00 AM To 3:00 PM",
   },
   reception: {
     name: "Terabella Gardens",
     location: "Ongata Rongai",
-    time: "11:00 PM To 4:00 PM",
+    time: "10:00 PM To 3:00 PM",
   },
 } as const;
 
 export const CONTACT_INFO = {
-  bride: {
-    name: "Vanessa",
-    phone: "+254 700 000 001",
+  security: {
+    name: "",
+    phone: "+254725 152 765",
   },
-  groom: {
-    name: "Augustine",
-    phone: "+254 700 000 002",
+  security2: {
+    name: "",
+    phone: "+254 757 937 999",
+  },
+  security3: {
+    name: "",
+    phone: "+254 759 819 665",
   },
   email: "vdvanessad@gmail.com",
 } as const;

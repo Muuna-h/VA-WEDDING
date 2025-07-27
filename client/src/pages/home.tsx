@@ -41,7 +41,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Join us as we celebrate our love story, FROM 11:00 AM at Terabella Gardens, Ongata Rongai
+            You're warmly invited to join us in celebrating the beginning of our forever, starting at 10:00 a.m. at Terabella Gardens, Ongata Rongai.
           </motion.p>
           
           <motion.div 

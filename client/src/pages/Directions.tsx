@@ -64,7 +64,7 @@ export default function Directions() {
                     <h4 className="font-semibold text-wedding-charcoal">From Town:</h4>
                     <ul className="list-disc pl-5 space-y-2">
                       <li>Drive past Kware Market</li>
-                      <li>Look for Energy petrol station on your left</li>
+                      <li>Look for Bee Energy petrol station on your left</li>
                       <li>Turn onto the rough road next to the petrol station</li>
                       <li>Drive 100 meters from the main road</li>
                       <li>Terrabella Gardens will be on your right</li>
@@ -73,7 +73,7 @@ export default function Directions() {
                     <h4 className="font-semibold text-wedding-charcoal mt-4">From Kiserian:</h4>
                     <ul className="list-disc pl-5 space-y-2">
                       <li>Drive past Arap Moi Primary School</li>
-                      <li>Look for Energy petrol station on your right</li>
+                      <li>Look for Bee Energy petrol station on your right</li>
                       <li>Turn onto the rough road next to the petrol station</li>
                       <li>Drive 100 meters from the main road</li>
                       <li>Terrabella Gardens will be on your right</li>
@@ -86,24 +86,33 @@ export default function Directions() {
               <Card className="bg-gradient-to-br from-pink-50 to-white shadow-lg">
                 <CardContent className="p-8">
                   <h3 className="font-playfair text-2xl text-wedding-charcoal mb-6">
-                    Contact Information
+                    Contact Info For Direction
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <User className="w-5 h-5 text-wedding-pink mr-4" />
                       <div>
-                        <h4 className="font-semibold text-wedding-charcoal">Bride</h4>
+                        <h4 className="font-semibold text-wedding-charcoal">For Assistance</h4>
                         <p className="text-gray-600">
-                          {CONTACT_INFO.bride.name} - {CONTACT_INFO.bride.phone}
+                          Call: {CONTACT_INFO.security.phone}
                         </p>
                       </div>
                     </div>
                     <div className="flex items-center">
                       <User className="w-5 h-5 text-wedding-pink mr-4" />
                       <div>
-                        <h4 className="font-semibold text-wedding-charcoal">Groom</h4>
+                        <h4 className="font-semibold text-wedding-charcoal"></h4>
                         <p className="text-gray-600">
-                          {CONTACT_INFO.groom.name} - {CONTACT_INFO.groom.phone}
+                          Call: {CONTACT_INFO.security3.phone}
+                        </p>
+                      </div>
+                    </div>
+                      <div className="flex items-center">
+                      <User className="w-5 h-5 text-wedding-pink mr-4" />
+                      <div>
+                        <h4 className="font-semibold text-wedding-charcoal"></h4>
+                        <p className="text-gray-600">
+                          Call: {CONTACT_INFO.security2.phone}
                         </p>
                       </div>
                     </div>
