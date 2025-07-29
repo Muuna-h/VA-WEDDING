@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Clock, MapPin, Users, Church, Utensils, Mail } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Church, Utensils, Mail, ClipboardList } from "lucide-react";
 import { VENUE_INFO } from "@/lib/constants";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -22,7 +22,7 @@ export default function EventDetails() {
             <div className="w-20 sm:w-24 h-1 bg-[#d4af37] mx-auto" />
           </motion.div>
           
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-12 max-w-6xl mx-auto">
             {/* Ceremony Details */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -60,6 +60,45 @@ export default function EventDetails() {
                      </p>
                     <p className="text-xs sm:text-sm text-gray-600 mt-2 italic">
                       The reception will be held at the same venue starting from 12PM following the ceremony.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+            
+            {/* Order of Events Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+            >
+              <Card className="bg-white shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-6 sm:p-8">
+                  <div className="text-center mb-4 sm:mb-6">
+                    <ClipboardList className="w-10 h-10 sm:w-12 sm:h-12 text-[#d4af37] mx-auto mb-3 sm:mb-4" />
+                    <h3 className="font-playfair text-xl sm:text-2xl text-wedding-charcoal mb-2">
+                      Order of Events
+                    </h3>
+                  </div>
+                  <div className="space-y-2 sm:space-y-3">
+                    <p className="text-sm font-medium">MC: Mr. James Mutura</p>
+                    <div className="space-y-1">
+                      <p className="text-sm">• Opening Prayer</p>
+                      <p className="text-sm">• Praise & Worship song</p>
+                      <p className="text-sm">• Groom Procession - Page boys/Big boys song</p>
+                      <p className="text-sm">• Bride Procession - Flower girl/Big Girl song</p>
+                      <p className="text-sm">• Introduction: MC</p>
+                      <p className="text-sm">• Prayer - Praise & Worship team</p>
+                      <p className="text-sm">• Sermon session: Rev</p>
+                      <p className="text-sm">• Cake Session</p>
+                      <p className="text-sm">• Gifts & Presents</p>
+                      <p className="text-sm">• Vote of thanks</p>
+                      <p className="text-sm">• Food</p>
+                      <p className="text-sm">• Closing Prayer</p>
+                      <p className="text-sm">• Photo Session</p>
+                    </div>
+                    <p className="text-xs sm:text-sm text-gray-600 mt-2 italic text-center">
+                      Guest Leave at their pleasure. GOD BLESS YOU!
                     </p>
                   </div>
                 </CardContent>
